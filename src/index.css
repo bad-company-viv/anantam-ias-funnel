@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #111c2f;
+  background: #faf8f3;
+}
+
+@layer base {
+  * {
+    @apply border-ink-100;
+  }
+
+  body {
+    @apply font-sans antialiased text-ink-900 bg-sand-50;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-ink-950 tracking-[0.01em];
+  }
+
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-saffron-500/70 focus-visible:ring-offset-2 focus-visible:ring-offset-sand-50;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .panel {
+    @apply bg-white/95 border border-ink-100 rounded-3xl shadow-panel;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 min-h-11 px-6 py-3 rounded-xl bg-saffron-500 text-white font-semibold hover:bg-saffron-600 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 min-h-11 px-6 py-3 rounded-xl border border-ink-200 text-ink-900 bg-white hover:bg-ink-50 transition-colors;
+  }
+
+  .section-title {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight;
+  }
+
+  .section-kicker {
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full bg-saffron-50 text-saffron-700 text-xs font-semibold uppercase tracking-[0.08em];
+  }
+}
