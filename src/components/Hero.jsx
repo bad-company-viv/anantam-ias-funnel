@@ -20,13 +20,13 @@ const Hero = () => {
   }
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-sand-50 to-white pt-28 pb-16 sm:pb-24">
+    <section className="relative flex min-h-screen items-center overflow-hidden bg-gradient-to-b from-sand-50 to-white pt-24 pb-10 sm:pt-28 sm:pb-14">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-16 top-0 h-64 w-64 rounded-full bg-saffron-100/60 blur-3xl" />
         <div className="absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-ink-100/60 blur-3xl" />
       </div>
 
-      <div className="section-shell relative">
+      <div className="section-shell relative w-full">
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <motion.div
             initial={{ opacity: 0, y: 18 }}
